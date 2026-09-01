@@ -1,3 +1,7 @@
 go 1.26.2
 
-use "./1 - Hello World"
+use (
+	"./1 - Hello World"
+	"./2 - Slices, Arrays e Ponteiros/2.1 - Introdução"
+	"./2 - Slices, Arrays e Ponteiros/2.2 - Cópia Simples"
+)
