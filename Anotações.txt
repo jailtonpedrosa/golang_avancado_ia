@@ -1,0 +1,13 @@
+1). go work init → cria um workspace (go.work) para trabalhar com vários módulos juntos.
+2). go mod init → cria um módulo Go (go.mod).
+go mod init já na convenção para no caso se quiser publicar
+go mod init github.com/jailtonpedrosa/golang_avancado_ia/hello-world
+
+3). para adicionar os novos arquivos no go work, volta na pasta raiz onde foi criado o go.work
+go work use ".\1 - Hello World"
+
+4). esse comando builda o update-go-work sem precisar estar com a dependencia no go mod
+set GO111MODULE=off && go build -o update-go-work update-go-work.go
+
+5). para executar o binário
+./update-go-work
