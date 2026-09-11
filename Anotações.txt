@@ -11,3 +11,7 @@ set GO111MODULE=off && go build -o update-go-work update-go-work.go
 
 5). para executar o binário
 ./update-go-work
+
+6). make instancia um tipo especifico pra mim com valores em branco
+7). valor zero de um inteiro é 0, de um bool é false de uma string é vazio
+E O VALOR ZERO DE UM PONTEIRO É NIL

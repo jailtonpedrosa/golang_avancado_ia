@@ -4,4 +4,7 @@ use (
 	"./1 - Hello World"
 	"./2 - Slices, Arrays e Ponteiros/2.1 - Introdução"
 	"./2 - Slices, Arrays e Ponteiros/2.2 - Cópia Simples"
+	"./2 - Slices, Arrays e Ponteiros/2.3 - Deep Copy"
+	"./2 - Slices, Arrays e Ponteiros/2.4 - Ponteiros"
+	"./2 - Slices, Arrays e Ponteiros/2.5 - Deep Copy com Ponteiros"
 )
