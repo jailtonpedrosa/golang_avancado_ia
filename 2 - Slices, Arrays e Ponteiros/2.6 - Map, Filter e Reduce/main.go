@@ -21,18 +21,41 @@ func main() {
 	})
 
 	fmt.Println(lista)
-	
+
 	lista = lista.Map(func(i int) int {
 		return i * 2
 	})
-	
+
 	fmt.Println(lista)
 
 	soma := lista.Reduce(func(i1, i2 int) int {
 		return i1 + i2
-	})
+	}, 0)
 
 	fmt.Println(soma)
+
+	subtracao := lista.Reduce(func(i1, i2 int) int {
+		return i1 - i2
+	}, 0)
+
+	fmt.Println(subtracao)
+	
+	multiplicacao := lista.Reduce(func(i1, i2 int) int {
+		return i1 * i2
+	}, 1)
+
+	fmt.Println(multiplicacao)
+
+	// encadeamento
+	multiplicacao2 := lista.Filter(func(i int) bool {
+		return i%2 == 0
+	}).Map(func(i int) int {
+		return i * 10
+	}).Reduce(func(i1, i2 int) int {
+		return i1 * i2
+	}, 1)
+	
+	fmt.Println(multiplicacao2)
 }
 
 func (m mySlice) Filter(condicao func(int) bool) mySlice {
@@ -57,8 +80,8 @@ func (m mySlice) Map(transformacao func(int) int) mySlice {
 	return resultado
 }
 
-func (m mySlice) Reduce(acumulador func(int, int) int) int {
-	var resultado int
+func (m mySlice) Reduce(acumulador func(int, int) int, inicial int) int {
+	var resultado = inicial
 
 	for _, numero := range m {
 		resultado = acumulador(resultado, numero)
