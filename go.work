@@ -8,4 +8,7 @@ use (
 	"./2 - Slices, Arrays e Ponteiros/2.4 - Ponteiros"
 	"./2 - Slices, Arrays e Ponteiros/2.5 - Deep Copy com Ponteiros"
 	"./2 - Slices, Arrays e Ponteiros/2.6 - Map, Filter e Reduce"
+	"./3 - Maps/3.1 - Introdução"
+	"./3 - Maps/3.2 - Race Condition"
+	"./3 - Maps/3.3 - Mutex"
 )
